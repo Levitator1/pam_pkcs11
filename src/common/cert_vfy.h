@@ -53,6 +53,7 @@ struct cert_policy_st {
 	const char *crl_dir;
 	const char *nss_dir;
 	int ocsp_policy;
+        int decrypt_policy;
 };
 
 #ifndef __CERT_VFY_C

@@ -680,6 +680,51 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
     goto auth_failed_nopw;
   }
 
+  /* Perform an encryption round-trip on the certificate to confirm that the user possesses the private key */
+  if (configuration->policy.decrypt_policy){
+    int result;
+    char *err_detail="";
+    int enc_len = sizeof(random_value) * 2;
+    char *encrypted = malloc( enc_len );    
+    
+    pam_prompt(pamh, PAM_TEXT_INFO, NULL, _("Testing private key"));
+      
+    /* read random value */
+    rv = get_random_value(random_value, sizeof(random_value));
+    if (rv != 0) {
+      ERR1("get_random_value() failed: %s", get_error());
+                if (!configuration->quiet){
+                        pam_syslog(pamh, LOG_ERR, "get_random_value() failed: %s", get_error());
+                        pam_prompt(pamh, PAM_ERROR_MSG , NULL, _("Error 2338: Getting random value failed"));
+                        sleep(configuration->err_display_time);
+                }
+      goto auth_failed_nopw;
+    }
+    
+    result = encrypt_value(ph, chosen_cert, random_value, sizeof(random_value), &encrypted, &enc_len);
+    if( result != 0 ) {
+      ERR1("encrypt_value() failed: %s", get_error());
+                if (!configuration->quiet){
+                        pam_syslog(pamh, LOG_ERR, "encrypt_value() failed: %s", get_error());
+                        pam_prompt(pamh, PAM_ERROR_MSG , NULL, _("Error 2338: Encryption with certificate failed"));
+                        sleep(configuration->err_display_time);
+                }
+      goto auth_failed_nopw;
+    }
+    
+    if (1) {
+      //close_pkcs11_session(ph);
+      //release_pkcs11_module(ph);
+      ERR1("Certificate round-trip encryption failed%s", err_detail);
+		if (!configuration->quiet) {
+			pam_syslog(pamh, LOG_ERR, "Certificate round-trip encryption failed%s", get_error());
+			pam_prompt(pamh, PAM_ERROR_MSG , NULL, _("Error 2342: Verifying certificate keys failed"));
+			sleep(configuration->err_display_time);
+		}
+      //return PAM_AUTH_ERR;
+      goto auth_failed_nopw;
+    }
+  }
 
   /* if signature check is enforced, generate random data, sign and verify */
   if (configuration->policy.signature_policy) {
@@ -695,8 +740,8 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
                  "get_private_key() failed: %s", get_error());
       goto auth_failed_nopw;
     }
-#endif
-
+#endif    
+    
     /* read random value */
     rv = get_random_value(random_value, sizeof(random_value));
     if (rv != 0) {
@@ -731,6 +776,9 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
       free(signature);
     }
     if (rv != 0) {
+      
+      //This doesn't jump to auth_failed_nopw like the other blocks, so it doesn't
+      //release mappers. Is that a resource leak?
       close_pkcs11_session(ph);
       release_pkcs11_module(ph);
       ERR1("verify_signature() failed: %s", get_error());

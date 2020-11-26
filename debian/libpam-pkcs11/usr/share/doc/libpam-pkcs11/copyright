@@ -1,0 +1,173 @@
+Authors:
+ Mario Strasser <mast@gmx.net>
+ Antonio Martinez <jonsito@teleline.es>
+ Ludovic Rousseau <ludovic.rousseau@free.fr>
+Download: https://sourceforge.net/projects/opensc/files/pam_pkcs11/
+
+Files: *
+Copyright:
+ (C) 2003-2004 Mario Strasser <mast@gmx.net>
+ (C) 2005 Juan Antonio Martinez <jonsito@teleline.es>
+ (C) 2005-2009 Ludovic Rousseau <ludovic.rousseau@free.fr>
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ can be found in /usr/share/common-licenses/LGPL-2.1 file.
+
+Files: src/common/NSPRerrs.h, src/common/SSLerrs.h, src/common/SECerrs.h
+Copyright: (C) 1994-2000 Netscape Communications Corporation.
+License: GPL-2+ | LGPL-2.1+ | MPL-1.1
+ The above mentioned files are tripple-licensed
+ under the GNU General Public License (GPL),
+ the GNU Lesser General Public License (LGPL),
+ and the Mozilla public License (MPL).
+ .
+ In Debian, these files are distributed under the LGPL.
+ .
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ can be found in /usr/share/common-licenses/LGPL-2.1 file.
+
+Files: src/common/base64.*
+Copyright: (C) 2001-2002  Juha Yrjola <juha.yrjola@iki.fi>
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ can be found in /usr/share/common-licenses/LGPL-2.1 file.
+
+Files: src/common/rsaref/*
+License: other
+ License to copy and use this software is granted provided that it is
+ identified as "RSA Security Inc. PKCS #11 Cryptographic Token Interface
+ (Cryptoki)" in all material mentioning or referencing this software.
+ .
+ License is also granted to make and use derivative works provided that
+ such works are identified as "derived from the RSA Security Inc. PKCS
+ #11 Cryptographic Token Interface (Cryptoki)" in all material mentioning
+ or referencing the derived work.
+ .
+ RSA Security Inc. makes no representations concerning either the
+ merchantability of this software or the suitability of this software for
+ any particular purpose. It is provided "as is" without express or
+ implied warranty of any kind.
+
+Files: src/mappers/ldap_mapper.c
+Copyright: (C) 2005 Dominik Fischer <dom_fischer@web.de>
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ can be found in /usr/share/common-licenses/LGPL-2.1 file.
+
+Files: src/scconf:
+Copyright:
+ (C) 2002 Antti Tapaninen <aet@cc.hut.fi>
+ (C) 2003 Jamie Honan <jhonan@optusnet.com.au>
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ can be found in /usr/share/common-licenses/LGPL-2.1 file.
+
+Files: src/tools/pkcs11_setup.c
+Copyright: (C) 2006 Red Hat, Inc. <http://www.redhat.com/>
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ can be found in /usr/share/common-licenses/LGPL-2.1 file.
+
+Files: debian/*
+Copyright: (C) 2007-2009 Daniel Baumann <daniel@debian.org>
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Library General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ can be found in /usr/share/common-licenses/LGPL-2.1 file.

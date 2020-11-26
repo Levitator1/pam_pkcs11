@@ -1,0 +1,8 @@
+./debian/tmp/usr/share/man/man8/pam_pkcs11.8
+./debian/tmp/usr/share/man/man1/pkcs11_eventmgr.1
+./debian/tmp/usr/share/man/man1/pkcs11_inspect.1
+./debian/tmp/usr/share/man/man1/pklogin_finder.1
+./debian/tmp/usr/share/man/man1/card_eventmgr.1
+./debian/tmp/usr/share/man/man1/pkcs11_make_hash_link.1
+./debian/tmp/usr/share/man/man1/pkcs11_setup.1
+./debian/tmp/usr/share/man/man1/pkcs11_listcerts.1

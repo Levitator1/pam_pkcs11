@@ -1,0 +1,31 @@
+Source: pam-pkcs11
+Section: admin
+Priority: optional
+Maintainer: Ludovic Rousseau <rousseau@debian.org>
+Build-Depends: debhelper (>= 9~), dh-autoreconf, libcurl4-openssl-dev, libldap2-dev, libpam-dev, libpcsclite-dev (>= 1.4.4), libssl-dev, pkg-config
+Standards-Version: 3.9.8
+Vcs-Git: https://salsa.debian.org/debian/pam-pkcs11.git
+Vcs-Browser: https://salsa.debian.org/debian/pam-pkcs11
+Homepage: https://github.com/OpenSC/pam_pkcs11/wiki
+
+Package: libpam-pkcs11
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Fully featured PAM module for using PKCS#11 smart cards
+ A Pluggable Authentication Module for PKCS#11 based smart cards. Useful for
+ enabling smart card based user login to a system.
+ .
+ More advanced than libpam-p11. Additional features include full verification of
+ the card data using certificate chains and certificate revocation lists.
+ Advanced username mapping including LDAP, Active Directory and Kerberos.
+
+Package: pam-pkcs11-dbg
+Section: debug
+Priority: optional
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libpam-pkcs11 (= ${binary:Version})
+Description: Fully featured PAM module for using PKCS#11 smart cards (debug)
+ A Pluggable Authentication Module for PKCS#11 based smart cards. Useful for
+ enabling smart card based user login to a system.
+ .
+ This package contains the debugging symbols.

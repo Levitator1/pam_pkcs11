@@ -957,7 +957,7 @@ struct cert_object_str {
   CK_CERTIFICATE_TYPE type;
   CK_BYTE *id;
   CK_ULONG id_length;
-  CK_OBJECT_HANDLE private_key;
+  CK_OBJECT_HANDLE private_key, public_key;
   X509 *x509;
 };
 
@@ -1671,17 +1671,37 @@ getlist_error:
   return NULL;
 }
 
-/* retrieve the private key associated with a given certificate */
-int get_private_key(pkcs11_handle_t *h, cert_object_t *cert) {
-  CK_OBJECT_CLASS key_class = CKO_PRIVATE_KEY;
+/* retrieve a key associated with a given certificate */
+static int get_key(pkcs11_handle_t *h, cert_object_t *cert, CK_OBJECT_CLASS key_class) {
+  //CK_OBJECT_CLASS key_class = CKO_PRIVATE_KEY;
+  CK_OBJECT_HANDLE *cert_field=NULL;
+
+  
   CK_BBOOL key_sign = CK_TRUE;
+  CK_ATTRIBUTE sign_attribute = {CKA_SIGN, &key_sign, sizeof(key_sign)};
+  CK_ATTRIBUTE id_attribute = {CKA_ID, NULL, 0};
+  int template_count=1;
+  
   CK_ATTRIBUTE key_template[] = {
-    {CKA_CLASS, &key_class, sizeof(key_class)}
-    ,
-    {CKA_SIGN, &key_sign, sizeof(key_sign)}
-    ,
-    {CKA_ID, NULL, 0}
+    {CKA_CLASS, &key_class, sizeof(key_class)},
+    {0},
+    {0}
   };
+  
+  switch(key_class){
+      case CKO_PRIVATE_KEY:
+          cert_field = &cert->private_key;
+          key_template[ template_count++ ] = sign_attribute;
+          break;
+          
+      case CKO_PUBLIC_KEY:
+          cert_field = &cert->public_key;          
+          break;
+          
+      default:
+        set_error("get_key() unknown key class: 0x%08lX", key_class);
+        return -1;
+  }
   CK_KEY_TYPE key_type;
   CK_ATTRIBUTE attr_template[] = {
     {CKA_KEY_TYPE, &key_type, sizeof(key_type)}
@@ -1690,19 +1710,19 @@ int get_private_key(pkcs11_handle_t *h, cert_object_t *cert) {
   CK_ULONG object_count;
   int rv;
 
-  if (cert->private_key != CK_INVALID_HANDLE) {
+  if (*cert_field != CK_INVALID_HANDLE) {
      /* we've already found the private key for this certificate */
      return 0;
   }
 
   /* search for a specific ID is any */
   if (cert->id && cert->id_length) {
-	  key_template[2].pValue = cert->id;
-	  key_template[2].ulValueLen = cert->id_length;
-	  rv = h->fl->C_FindObjectsInit(h->session, key_template, 3);
-  } else {
-	  rv = h->fl->C_FindObjectsInit(h->session, key_template, 2);
+	  id_attribute.pValue = cert->id;
+	  id_attribute.ulValueLen = cert->id_length;
+          key_template[ template_count++ ] = id_attribute;
   }
+  
+  rv = h->fl->C_FindObjectsInit(h->session, key_template, template_count);
   if (rv != CKR_OK) {
     set_error("C_FindObjectsInit() failed: 0x%08lX", rv);
     return -1;
@@ -1733,7 +1753,7 @@ int get_private_key(pkcs11_handle_t *h, cert_object_t *cert) {
   }
   DBG1("private key type: 0x%08lX", key_type);
 
-  cert->private_key = object;
+  *cert_field = object;
   cert->key_type = key_type;
 
   return 0;
@@ -1746,6 +1766,14 @@ get_privkey_failed:
   return -1;
 }
 
+int get_private_key(pkcs11_handle_t *h, cert_object_t *cert){
+    return get_key(h, cert, CKO_PRIVATE_KEY);
+}
+
+int get_public_key(pkcs11_handle_t *h, cert_object_t *cert){
+    return get_key(h, cert, CKO_PUBLIC_KEY);
+}
+
 const char *get_slot_tokenlabel(pkcs11_handle_t *h)
 {
   return h->slots[h->current_slot].label;
@@ -1756,6 +1784,56 @@ const X509 *get_X509_certificate(cert_object_t *cert)
   return cert->x509;
 }
 
+int encrypt_value( pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data, 
+        CK_ULONG length, CK_BYTE **output, CK_ULONG *output_length){
+  
+  int result;
+      
+  CK_MECHANISM mechanism = { 0, NULL, 0 };
+  
+  if (get_public_key (h, cert) == -1) {
+    set_error("Couldn't find public key for certificate");
+    return -1;
+  }
+  
+  switch (cert->key_type) {
+    case CKK_RSA:
+      mechanism.mechanism = CKM_RSA_PKCS;
+      break;
+    case CKK_ECDSA:
+      mechanism.mechanism = CKM_ECDSA;
+      break;
+    default:
+      set_error("unsupported public key type 0x%08X", cert->key_type);
+      return -1;
+  }
+  
+  /*
+  result = h->fl->C_EncryptInit(h->session, &mechanism, cert->private_key);
+  if(result != CKR_OK){
+      set_error("C_EncryptInit() failed initializing Cryptoki encryption: 0x%08lX", result);
+      return -1;
+  }
+  
+  while(1){
+    result = h->fl->C_Encrypt(h->session, data, length, *output, output_length);
+    if(result == CKR_BUFFER_TOO_SMALL){
+        free(*output);
+        *output = malloc( *output_length * 2 );
+        continue;
+    }
+    
+    if(result == CKR_OK){
+        return 0;
+    }
+    else{
+      set_error("C_Encrypt() failed performing public-key encryption: 0x%08lX", result);
+      return -1;
+    }
+  }  
+  */
+}
+ 
 int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
 	CK_ULONG length, CK_BYTE **signature, CK_ULONG *signature_length)
 {

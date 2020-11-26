@@ -1,0 +1,4 @@
+usr/share/locale/
+lib/security/
+lib/pam_pkcs11/
+usr/bin/

@@ -60,7 +60,8 @@ struct configuration_st configuration = {
 		CONFDIR "/cacerts",
 		CONFDIR "/crls",
 		CONFDIR "/nssdb",
-		OCSP_NONE
+		OCSP_NONE,
+                0
 	},
 	N_("Smart card"),			/* token_type */
 	NULL,				/* char *username */
@@ -186,6 +187,7 @@ static void parse_config_file(void) {
 			configuration.policy.ocsp_policy=OCSP_NONE;
 			configuration.policy.ca_policy=0;
 			configuration.policy.signature_policy=0;
+                        configuration.policy.decrypt_policy=0;
 			break;
 		} else if ( !strcmp(policy_list->data,"crl_auto") ) {
 			configuration.policy.crl_policy=CRLP_AUTO;
@@ -199,6 +201,8 @@ static void parse_config_file(void) {
 			configuration.policy.ca_policy=1;
 		} else if ( !strcmp(policy_list->data,"signature") ) {
 			configuration.policy.signature_policy=1;
+		} else if ( !strcmp(policy_list->data,"decrypt") ) {
+			configuration.policy.decrypt_policy=1;
 		} else {
                    DBG1("Invalid CRL policy: %s",policy_list->data);
 	        }

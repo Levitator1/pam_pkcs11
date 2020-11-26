@@ -1,0 +1,15 @@
+Package: pam-pkcs11-dbg
+Source: pam-pkcs11
+Version: 0.6.11-1
+Architecture: amd64
+Maintainer: Ludovic Rousseau <rousseau@debian.org>
+Installed-Size: 19
+Depends: libpam-pkcs11 (= 0.6.11-1)
+Section: debug
+Priority: optional
+Homepage: https://github.com/OpenSC/pam_pkcs11/wiki
+Description: Fully featured PAM module for using PKCS#11 smart cards (debug)
+ A Pluggable Authentication Module for PKCS#11 based smart cards. Useful for
+ enabling smart card based user login to a system.
+ .
+ This package contains the debugging symbols.

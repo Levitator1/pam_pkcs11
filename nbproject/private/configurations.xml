@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="aclocal">
+      </df>
+      <df name="autom4te.cache">
+      </df>
+      <df name="debian">
+        <df name=".debhelper">
+          <df name="generated">
+            <df name="libpam-pkcs11">
+            </df>
+            <df name="pam-pkcs11-dbg">
+            </df>
+          </df>
+        </df>
+        <df name="libpam-pkcs11">
+          <df name="DEBIAN">
+          </df>
+          <df name="etc">
+            <df name="pam_pkcs11">
+              <df name="cacerts">
+              </df>
+              <df name="crls">
+              </df>
+            </df>
+          </df>
+          <df name="lib">
+            <df name="pam_pkcs11">
+            </df>
+            <df name="security">
+            </df>
+          </df>
+          <df name="usr">
+            <df name="bin">
+            </df>
+            <df name="share">
+              <df name="doc">
+                <df name="libpam-pkcs11">
+                  <df name="examples">
+                  </df>
+                </df>
+              </df>
+              <df name="locale">
+                <df name="de">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="fr">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="it">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="nl">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="pl">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="pt_BR">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="ru">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="tr">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+              </df>
+              <df name="man">
+                <df name="man1">
+                </df>
+                <df name="man8">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="pam-pkcs11-dbg">
+          <df name="DEBIAN">
+          </df>
+          <df name="usr">
+            <df name="share">
+              <df name="doc">
+                <df name="pam-pkcs11-dbg">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="patches">
+        </df>
+        <df name="source">
+        </df>
+        <df name="tmp">
+          <df name="lib">
+            <df name="pam_pkcs11">
+            </df>
+            <df name="security">
+            </df>
+          </df>
+          <df name="usr">
+            <df name="bin">
+            </df>
+            <df name="share">
+              <df name="doc">
+                <df name="pam_pkcs11">
+                </df>
+              </df>
+              <df name="locale">
+                <df name="de">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="fr">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="it">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="nl">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="pl">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="pt_BR">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="ru">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+                <df name="tr">
+                  <df name="LC_MESSAGES">
+                  </df>
+                </df>
+              </df>
+              <df name="man">
+                <df name="man1">
+                </df>
+                <df name="man8">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="doc">
+      </df>
+      <df name="etc">
+      </df>
+      <df name="netbeans">
+      </df>
+      <df name="po">
+      </df>
+      <df name="src">
+        <df name="common">
+          <df name=".libs">
+          </df>
+          <df name="rsaref">
+            <in>pkcs11.h</in>
+            <in>pkcs11f.h</in>
+            <in>pkcs11t.h</in>
+          </df>
+          <in>NSPRerrs.h</in>
+          <in>SECerrs.h</in>
+          <in>SSLerrs.h</in>
+          <in>alg_st.h</in>
+          <in>algorithm.c</in>
+          <in>base64.c</in>
+          <in>base64.h</in>
+          <in>cert_info.c</in>
+          <in>cert_info.h</in>
+          <in>cert_st.h</in>
+          <in>cert_vfy.c</in>
+          <in>cert_vfy.h</in>
+          <in>debug.c</in>
+          <in>debug.h</in>
+          <in>error.c</in>
+          <in>error.h</in>
+          <in>pam-pkcs11-ossl-compat.h</in>
+          <in>pkcs11_lib.c</in>
+          <in>pkcs11_lib.h</in>
+          <in>secutil.h</in>
+          <in>strings.c</in>
+          <in>strings.h</in>
+          <in>strndup.c</in>
+          <in>strndup.h</in>
+          <in>uri.c</in>
+          <in>uri.h</in>
+        </df>
+        <df name="mappers">
+          <df name=".libs">
+          </df>
+          <in>cn_mapper.c</in>
+          <in>cn_mapper.h</in>
+          <in>digest_mapper.c</in>
+          <in>digest_mapper.h</in>
+          <in>generic_mapper.c</in>
+          <in>generic_mapper.h</in>
+          <in>krb_mapper.c</in>
+          <in>krb_mapper.h</in>
+          <in>ldap_mapper.c</in>
+          <in>ldap_mapper.h</in>
+          <in>mail_mapper.c</in>
+          <in>mail_mapper.h</in>
+          <in>mapper.c</in>
+          <in>mapper.h</in>
+          <in>mapperlist.c</in>
+          <in>mapperlist.h</in>
+          <in>ms_mapper.c</in>
+          <in>ms_mapper.h</in>
+          <in>null_mapper.c</in>
+          <in>null_mapper.h</in>
+          <in>opensc_mapper.c</in>
+          <in>opensc_mapper.h</in>
+          <in>openssh_mapper.c</in>
+          <in>openssh_mapper.h</in>
+          <in>pwent_mapper.c</in>
+          <in>pwent_mapper.h</in>
+          <in>subject_mapper.c</in>
+          <in>subject_mapper.h</in>
+          <in>uid_mapper.c</in>
+          <in>uid_mapper.h</in>
+        </df>
+        <df name="pam_pkcs11">
+          <df name=".libs">
+          </df>
+          <in>mapper_mgr.c</in>
+          <in>mapper_mgr.h</in>
+          <in>pam_config.c</in>
+          <in>pam_config.h</in>
+          <in>pam_pkcs11.c</in>
+        </df>
+        <df name="scconf">
+          <df name=".libs">
+          </df>
+          <in>internal.h</in>
+          <in>parse.c</in>
+          <in>scconf.c</in>
+          <in>scconf.h</in>
+          <in>sclex.c</in>
+          <in>write.c</in>
+        </df>
+        <df name="tools">
+          <df name=".libs">
+          </df>
+          <in>card_eventmgr.c</in>
+          <in>daemon.c</in>
+          <in>pkcs11_eventmgr.c</in>
+          <in>pkcs11_inspect.c</in>
+          <in>pkcs11_listcerts.c</in>
+          <in>pkcs11_setup.c</in>
+          <in>pklogin_finder.c</in>
+        </df>
+      </df>
+      <df name="tools">
+      </df>
+      <in>config.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>~/sugdb login</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/build/sugdb login</runcommandpicklistitem>
+          <runcommandpicklistitem>login</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>login</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+          <variable name="LOGIN_TIMEOUT" value="900"/>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

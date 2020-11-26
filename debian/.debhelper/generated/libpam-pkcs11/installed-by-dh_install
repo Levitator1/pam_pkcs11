@@ -1,0 +1,4 @@
+debian/tmp/usr/share/locale/
+debian/tmp/lib/security/
+debian/tmp/lib/pam_pkcs11/
+debian/tmp/usr/bin/

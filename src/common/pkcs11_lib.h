@@ -63,6 +63,7 @@ PKCS11_EXTERN int get_slot_protected_authentication_path(pkcs11_handle_t *h);
 PKCS11_EXTERN cert_object_t **get_certificate_list(pkcs11_handle_t *h,
                                                   int *ncert);
 PKCS11_EXTERN int get_private_key(pkcs11_handle_t *h, cert_object_t *);
+PKCS11_EXTERN int get_public_key(pkcs11_handle_t *h, cert_object_t *);
 PKCS11_EXTERN int sign_value(pkcs11_handle_t *h, cert_object_t *,
                unsigned char *data, unsigned long length,
                unsigned char **signature, unsigned long *signature_length);

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="src">
+        <df name="common">
+          <in>algorithm.c</in>
+          <in>base64.c</in>
+          <in>cert_info.c</in>
+          <in>cert_vfy.c</in>
+          <in>debug.c</in>
+          <in>error.c</in>
+          <in>pkcs11_lib.c</in>
+          <in>strings.c</in>
+          <in>strndup.c</in>
+          <in>uri.c</in>
+        </df>
+        <df name="mappers">
+          <in>cn_mapper.c</in>
+          <in>digest_mapper.c</in>
+          <in>generic_mapper.c</in>
+          <in>krb_mapper.c</in>
+          <in>ldap_mapper.c</in>
+          <in>mail_mapper.c</in>
+          <in>mapper.c</in>
+          <in>mapperlist.c</in>
+          <in>ms_mapper.c</in>
+          <in>null_mapper.c</in>
+          <in>opensc_mapper.c</in>
+          <in>openssh_mapper.c</in>
+          <in>pwent_mapper.c</in>
+          <in>subject_mapper.c</in>
+          <in>uid_mapper.c</in>
+        </df>
+        <df name="pam_pkcs11">
+          <in>mapper_mgr.c</in>
+          <in>pam_config.c</in>
+          <in>pam_pkcs11.c</in>
+        </df>
+        <df name="scconf">
+          <in>parse.c</in>
+          <in>scconf.c</in>
+          <in>sclex.c</in>
+          <in>write.c</in>
+        </df>
+        <df name="tools">
+          <in>card_eventmgr.c</in>
+          <in>daemon.c</in>
+          <in>pkcs11_eventmgr.c</in>
+          <in>pkcs11_inspect.c</in>
+          <in>pkcs11_listcerts.c</in>
+          <in>pkcs11_setup.c</in>
+          <in>pklogin_finder.c</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>GNU_SUGDB|GNU</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-g -O2 -fstack-protector-strong"/>
+        <element flagsID="1" commonFlags="-g -O2 -fstack-protector-strong -fPIC"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>netbeans/build</buildCommand>
+          <cleanCommand>netbeans/clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <preprocessorList>
+              <Elem>HAVE_CONFIG_H</Elem>
+              <Elem>_FORTIFY_SOURCE=2</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <folder path="0/src/common">
+        <cTool>
+          <incDir>
+            <pElem>src/common</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>PIC</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/src/mappers">
+        <cTool>
+          <incDir>
+            <pElem>src/mappers</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>CN_MAPPER_STATIC</Elem>
+            <Elem>DIGEST_MAPPER_STATIC</Elem>
+            <Elem>GENERIC_MAPPER_STATIC</Elem>
+            <Elem>KRB_MAPPER_STATIC</Elem>
+            <Elem>MAIL_MAPPER_STATIC</Elem>
+            <Elem>MS_MAPPER_STATIC</Elem>
+            <Elem>NULL_MAPPER_STATIC</Elem>
+            <Elem>PIC</Elem>
+            <Elem>PWENT_MAPPER_STATIC</Elem>
+            <Elem>SUBJECT_MAPPER_STATIC</Elem>
+            <Elem>UID_MAPPER_STATIC</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/src/pam_pkcs11">
+        <cTool>
+          <incDir>
+            <pElem>src/pam_pkcs11</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>PIC</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/src/scconf">
+        <cTool>
+          <incDir>
+            <pElem>src/scconf</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>PIC</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/src/tools">
+        <cTool>
+          <incDir>
+            <pElem>src/tools</pElem>
+            <pElem>.</pElem>
+            <pElem>/usr/include/PCSC</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="src/common/algorithm.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/base64.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/cert_info.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/cert_vfy.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/debug.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/error.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/pkcs11_lib.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/strings.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/strndup.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/common/uri.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/cn_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/digest_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/generic_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/krb_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/ldap_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/mail_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/mapperlist.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/ms_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/null_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/opensc_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/openssh_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/pwent_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/subject_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/mappers/uid_mapper.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/pam_pkcs11/mapper_mgr.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/pam_pkcs11/pam_config.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/pam_pkcs11/pam_pkcs11.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/scconf/parse.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/scconf/scconf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/scconf/sclex.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/scconf/write.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/tools/card_eventmgr.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="src/tools/daemon.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="src/tools/pkcs11_eventmgr.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="src/tools/pkcs11_inspect.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="src/tools/pkcs11_listcerts.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="src/tools/pkcs11_setup.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="src/tools/pklogin_finder.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

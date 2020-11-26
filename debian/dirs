@@ -1,0 +1,3 @@
+etc/pam_pkcs11
+etc/pam_pkcs11/cacerts
+etc/pam_pkcs11/crls

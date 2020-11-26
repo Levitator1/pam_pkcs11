@@ -1,0 +1,17 @@
+Package: libpam-pkcs11
+Source: pam-pkcs11
+Version: 0.6.11-1
+Architecture: amd64
+Maintainer: Ludovic Rousseau <rousseau@debian.org>
+Installed-Size: 3894
+Depends: libc6 (>= 2.14), libcurl4 (>= 7.16.2), libldap-2.4-2 (>= 2.4.7), libpam0g (>= 0.99.7.1), libpcsclite1 (>= 1.0.0), libssl1.1 (>= 1.1.1)
+Section: admin
+Priority: optional
+Homepage: https://github.com/OpenSC/pam_pkcs11/wiki
+Description: Fully featured PAM module for using PKCS#11 smart cards
+ A Pluggable Authentication Module for PKCS#11 based smart cards. Useful for
+ enabling smart card based user login to a system.
+ .
+ More advanced than libpam-p11. Additional features include full verification of
+ the card data using certificate chains and certificate revocation lists.
+ Advanced username mapping including LDAP, Active Directory and Kerberos.

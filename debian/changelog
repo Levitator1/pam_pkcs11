@@ -1,0 +1,174 @@
+pam-pkcs11 (0.6.11-1) UNRELEASED; urgency=high
+
+  * Previous version does not take EC keys into consideration when deciding the digest type
+  * Hopefully this version works with EC
+
+ --  <build@j3.home>  Wed, 25 Nov 2020 12:16:07 -0500
+
+pam-pkcs11 (0.6.9-3) unstable; urgency=medium
+
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/control: change Priority: from extra to optional
+    W: pam-pkcs11-dbg: priority-extra-is-replaced-by-priority-optional
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 25 Mar 2018 16:55:04 +0200
+
+pam-pkcs11 (0.6.9-2) unstable; urgency=medium
+
+  * Migrate the Debian packging from SVN to GIT
+  * Standards-Version: 3.9.3 -> 3.9.8. No change needed.
+  * Enable hardening
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Mon, 18 Dec 2017 17:52:20 +0100
+
+pam-pkcs11 (0.6.9-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fix "Out of date" provide new upstream (Closes: #838588)
+  * Fix "FTBFS with openssl 1.1.0" should work with new upstream
+    (Closes: #828487)
+  * Fix "Please install an empty /etc/pam_pkcs11 directory" (Closes: #834643)
+  * debian/patches/spelling: patch already included upstream
+  * do not include Doxygen API documentation
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 28 Sep 2016 11:05:40 +0200
+
+pam-pkcs11 (0.6.8-4) unstable; urgency=medium
+
+  * debian/control: update homepage URL from pensc-project.org to github.com
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 15 Feb 2014 12:00:46 +0100
+
+pam-pkcs11 (0.6.8-3) unstable; urgency=low
+
+  * Fix "use dh-autoreconf to fix FTBFS on ppc64el" use provided patch
+    (Closes: #737339)
+  * debian/watch: update URL from opensc-project.org to sf.net
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 02 Feb 2014 15:25:18 +0100
+
+pam-pkcs11 (0.6.8-2) unstable; urgency=low
+
+  * Fix "repeated words in package short description ("for using for
+    using")" (Closes: #697973)
+  * debian/patches/spelling: fix a spelling error spotted by lintian(1)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 07 Apr 2012 20:43:16 +0200
+
+pam-pkcs11 (0.6.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix "FTBFS: -Werror=format-security" fixed upstream (Closes: #667840)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 07 Apr 2012 19:15:58 +0200
+
+pam-pkcs11 (0.6.7-2) unstable; urgency=low
+
+  * use debhelper 9 to have automatic build hardening
+  * debian/control: Standards-Version: 3.9.2 -> 3.9.3. No change needed.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 06 Apr 2012 22:10:02 +0200
+
+pam-pkcs11 (0.6.7-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Standards-Version: 3.9.1 -> 3.9.2. No change needed.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 06 Aug 2011 15:55:43 +0200
+
+pam-pkcs11 (0.6.6-2) unstable; urgency=low
+
+  * upload to unstable
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 09 Feb 2011 23:22:44 +0100
+
+pam-pkcs11 (0.6.6-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 21 Nov 2010 14:49:42 +0100
+
+pam-pkcs11 (0.6.5-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control: Standards-Version: 3.8.4 -> 3.9.1. No change needed.
+  * use a minimal debian/rules file
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 23 Oct 2010 22:48:12 +0200
+
+pam-pkcs11 (0.6.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 12 Jun 2010 17:50:06 +0200
+
+pam-pkcs11 (0.6.3-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/watch: new file
+  * Standards-Version: 3.8.3 -> 3.8.4. No change needed
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 10 Apr 2010 17:44:35 +0200
+
+pam-pkcs11 (0.6.2-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/source/format: move to "3.0 (quilt)"
+  * debian/control: Standards-Version: 3.8.2 -> 3.8.3. No change needed
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 19 Dec 2009 15:17:32 +0100
+
+pam-pkcs11 (0.6.1-3) unstable; urgency=low
+
+  * New maintainer. (Closes: #543931: O: pam-pkcs11 -- Fully featured
+    PAM module for using for using PKCS#11 smart cards)
+  * debian/control: update Maintainer field
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 02 Sep 2009 12:56:50 +0000
+
+pam-pkcs11 (0.6.1-2) unstable; urgency=low
+
+  * Removing vcs fields.
+  * Orphaning package.
+
+ -- Daniel Baumann <daniel@debian.org>  Thu, 27 Aug 2009 16:26:45 +0200
+
+pam-pkcs11 (0.6.1-1) unstable; urgency=low
+
+  * Updating to standards 3.8.0.
+  * Upgrading package to debhelper 7.
+  * Adding vcs fields to control file.
+  * Shortening pam-pkcs11-dbg long-description.
+  * Reordering rules file.
+  * Reverting config.guess and config.sub to upstream.
+  * Updating vcs fields in control file.
+  * Removing config.guess and config.sub in clean target of rules.
+  * Replacing obsolete dh_clean -k with dh_prep.
+  * Updating section of the debug package.
+  * Merging upstream version 0.6.1.
+  * Updating package to standards version 3.8.2.
+  * Prefixing debhelper files with package name.
+  * Rewriting copyright file in machine-interpretable format.
+  * Updating rules file to current state of the art.
+  * Adding '-ldl' to LDFLAGS to make pam-pkcs11 build with current gcc.
+  * Using correct rfc-2822 date formats in changelog.
+
+ -- Daniel Baumann <daniel@debian.org>  Tue, 07 Jul 2009 17:10:26 +0200
+
+pam-pkcs11 (0.6.0-3) unstable; urgency=medium
+
+  * Adding debug package (Closes: #471830).
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 09 Apr 2008 11:31:00 +0200
+
+pam-pkcs11 (0.6.0-2) unstable; urgency=medium
+
+  * Updating ldap build-depends (Closes: #462600).
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 26 Jan 2008 10:45:00 +0100
+
+pam-pkcs11 (0.6.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #409592).
+
+ -- Daniel Baumann <daniel@debian.org>  Thu, 03 Jan 2008 11:11:00 +0100

@@ -1,0 +1,5 @@
+# numéro de version du format, actuellement 3.
+# Cette ligne est obligatoire !
+version=3
+
+http://sf.net/opensc/pam_pkcs11-(.+)\.tar\.gz
