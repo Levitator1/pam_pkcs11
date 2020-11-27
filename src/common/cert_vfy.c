@@ -81,6 +81,7 @@ int verify_signature(X509 * x509, unsigned char *data, int data_length,
 #include <openssl/x509v3.h>
 #include <openssl/x509_vfy.h>
 #include <openssl/evp.h>
+#include <openssl/engine.h>
 #include "error.h"
 #include "base64.h"
 #include "uri.h"
@@ -540,6 +541,30 @@ int verify_signature(X509 * x509, unsigned char *data, int data_length,
     BIGNUM *s = BN_bin2bn(*signature + rs_len, rs_len, NULL);
     ECDSA_SIG_set0(ec_sig, r, s);
     
+    md_ctx = EVP_MD_CTX_new();
+    EVP_PKEY_CTX *pctx=NULL;
+    rv = EVP_DigestVerifyInit(md_ctx, &pctx, EVP_sha256(), ENGINE_get_default_EC(), pubkey );
+    if (rv != 1) {
+      set_error("EVP_DigestVerifyInit() failed: %s", ERR_error_string(ERR_get_error(), NULL));
+      return -1;
+    }
+    
+    rv = EVP_DigestVerifyUpdate(md_ctx, data, data_length);
+    if (rv != 1) {
+      set_error("EVP_DigestVerifyUpdate() failed: %s", ERR_error_string(ERR_get_error(), NULL));
+      EVP_MD_CTX_free(md_ctx);
+      return -1;
+    }
+    
+    rv = EVP_DigestVerifyFinal(md_ctx, *signature, *signature_length);
+    EVP_MD_CTX_free(md_ctx);
+    if (rv != 1) {
+      set_error("EVP_DigestVerifyFinal() failed: %s", ERR_error_string(ERR_get_error(), NULL));
+      return -1;
+    }
+    return 0;
+    
+    /*
     EC_KEY *ec_key = EVP_PKEY_get1_EC_KEY(pubkey);
     rv = ECDSA_do_verify(data, data_length, ec_sig, ec_key);  
     if (rv != 1) {
@@ -552,6 +577,7 @@ int verify_signature(X509 * x509, unsigned char *data, int data_length,
     }
     
     EC_KEY_free(ec_key);
+    */
     return rv;
     
     /*

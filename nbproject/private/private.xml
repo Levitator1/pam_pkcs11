@@ -20,6 +20,7 @@
             <file>file:/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11/pam_pkcs11.c</file>
             <file>file:/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11/pam_config.c</file>
             <file>file:/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/pkcs11_lib.h</file>
+            <file>file:/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools/pklogin_finder.c</file>
         </group>
     </open-files>
 </project-private>

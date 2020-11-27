@@ -1805,6 +1805,9 @@ int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
       hash[19], hash[20], hash[21], hash[sizeof(hash) - 1]);
 #endif
   /* sign the token */
+  
+  
+  
   rv = h->fl->C_SignInit(h->session, &mechanism, cert->private_key);
   if (rv != CKR_OK) {
     set_error("C_SignInit() failed: 0x%08lX", rv);
