@@ -498,6 +498,17 @@ int verify_certificate(X509 * x509, cert_policy *policy)
   return rv;
 }
 
+void reverse(char *in, size_t len){
+    char tmp;
+    size_t j = len-1;
+    
+    for(size_t i=0;i<len/2;++i){
+        tmp = in[i];
+        in[i] = in[j];
+        in[j--] = tmp;
+    }
+}
+
 int verify_signature(X509 * x509, unsigned char *data, int data_length,
                      unsigned char **signature, unsigned long *signature_length)
 {
@@ -521,15 +532,64 @@ int verify_signature(X509 * x509, unsigned char *data, int data_length,
   if (EVP_PKEY_base_id(pubkey) == EVP_PKEY_EC) {
     rs_len = *signature_length / 2;
     ec_sig = ECDSA_SIG_new();
-    BN_bin2bn(*signature, rs_len, ECDSA_SIG_get0_r(ec_sig));
-    BN_bin2bn(*signature + rs_len, rs_len, ECDSA_SIG_get0_s(ec_sig));
+    //reverse(*signature, rs_len);
+    //reverse(*signature + rs_len, rs_len);
+    //BN_bin2bn(*signature, rs_len, ECDSA_SIG_get0_r(ec_sig));
+    //BN_bin2bn(*signature + rs_len, rs_len, ECDSA_SIG_get0_s(ec_sig));
+    BIGNUM *r = BN_bin2bn(*signature, rs_len, NULL);
+    BIGNUM *s = BN_bin2bn(*signature + rs_len, rs_len, NULL);
+    ECDSA_SIG_set0(ec_sig, r, s);
+    
+    EC_KEY *ec_key = EVP_PKEY_get1_EC_KEY(pubkey);
+    rv = ECDSA_do_verify(data, data_length, ec_sig, ec_key);  
+    if (rv != 1) {
+      set_error("ECDSA_verify() failed: %s", ERR_error_string(ERR_get_error(), NULL));
+      rv = -1;
+    }
+    else{
+        DBG("ECDSA signature is valid");
+        rv = 0;
+    }
+    
+    EC_KEY_free(ec_key);
+    return rv;
+    
+    /*
     *signature_length = i2d_ECDSA_SIG(ec_sig, &p);
     free(*signature);
     *signature = malloc(*signature_length);
-    p = *signature;
-    *signature_length = i2d_ECDSA_SIG(ec_sig, &p);
+    //p = *signature;
+    *signature_length = i2d_ECDSA_SIG(ec_sig, signature);
     ECDSA_SIG_free(ec_sig);
+    */
+    
+    /*
+    rv = ECDSA_do_verify(data, data_length, ec_sig, pubkey);  
+    if (rv != 1) {
+      set_error("ECDSA_verify() failed: %s", ERR_error_string(ERR_get_error(), NULL));
+      return -1;
+    }
+    DBG("ECDSA signature is valid");
+    return 0;
+    */
   }
+  
+  /*
+  if (EVP_PKEY_base_id(pubkey) == EVP_PKEY_EC) {
+    
+      unsigned char *dersig = malloc( i2d_ECDSA_SIG() );
+      rv = i2d_ECDSA_SIG();
+    
+    rv = ECDSA_verify(0, signature, signature_length, data, data_length, pubkey);
+    EVP_PKEY_free(pubkey);    
+    if (rv != 1) {
+      set_error("ECDSA_verify() failed: %s", ERR_error_string(ERR_get_error(), NULL));
+      return -1;
+    }
+    DBG("signature is valid");
+    return 0;
+  }
+  */
 
   md_ctx = EVP_MD_CTX_new();
   /* verify the signature */

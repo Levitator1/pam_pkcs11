@@ -76,3 +76,7 @@ src/tools/pkcs11_inspect
 src/tools/pkcs11_listcerts
 src/tools/pkcs11_setup
 src/tools/pklogin_finder
+
+# Debian
+debian/
+

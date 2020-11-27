@@ -1,0 +1,856 @@
+dh binary --with autoreconf
+   dh_update_autotools_config
+   dh_autoreconf
+autoreconf: configure.ac: AM_GNU_GETTEXT is used, but not AM_GNU_GETTEXT_VERSION
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in 'aclocal'.
+libtoolize: copying file 'aclocal/libtool.m4'
+libtoolize: copying file 'aclocal/ltoptions.m4'
+libtoolize: copying file 'aclocal/ltsugar.m4'
+libtoolize: copying file 'aclocal/ltversion.m4'
+libtoolize: copying file 'aclocal/lt~obsolete.m4'
+libtoolize: Consider adding 'AC_CONFIG_MACRO_DIRS([aclocal])' to configure.ac,
+libtoolize: and rerunning libtoolize and aclocal.
+configure.ac:26: installing './ar-lib'
+configure.ac:18: installing './compile'
+configure.ac:9: installing './config.guess'
+configure.ac:9: installing './config.sub'
+configure.ac:10: installing './install-sh'
+configure.ac:10: installing './missing'
+doc/Makefile.am:19: warning: shell ls api/*: non-POSIX variable name
+doc/Makefile.am:19: (probably a GNU make extension)
+doc/Makefile.am:26: warning: '%'-style pattern rules are a GNU make extension
+src/common/Makefile.am: installing './depcomp'
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+dh_auto_configure -- --libdir=/lib --with-curl
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --libdir=/lib --with-curl
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking whether /usr/bin/gcc understands -c and -o together... yes
+checking dependency style of /usr/bin/gcc... none
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking whether /usr/bin/gcc understands -c and -o together... (cached) yes
+checking dependency style of /usr/bin/gcc... (cached) none
+checking whether we are using the GNU C++ compiler... yes
+checking whether /usr/bin/g++ accepts -g... yes
+checking dependency style of /usr/bin/g++... none
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from /usr/bin/gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... no
+checking for /usr/bin/gcc option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/gcc PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/gcc static flag -static works... yes
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking if /usr/bin/gcc supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... /usr/bin/g++ -E
+checking for ld used by /usr/bin/g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the /usr/bin/g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for /usr/bin/g++ option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/g++ PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/g++ static flag -static works... yes
+checking if /usr/bin/g++ supports -c -o file.o... yes
+checking if /usr/bin/g++ supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether ln -s works... yes
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking if compiler needs -Werror to reject unknown flags... no
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for dlopen in -ldl... yes
+checking for curl_easy_init in -lcurl... yes
+checking for ldap_init in -lldap... yes
+checking for ldap_init... yes
+checking for ldap_initialize... yes
+checking for ldap_set_option... yes
+checking for ldap_get_option... yes
+checking for ldap_start_tls... yes
+checking for ldap_start_tls_s... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for OPENSSL... yes
+checking for PCSC... yes
+checking for winscard.h... yes
+checking for SCardEstablishContext... yes
+checking for xsltproc... xsltproc
+checking for pam_get_item in -lpam... yes
+checking for ANSI C header files... (cached) yes
+checking for string.h... (cached) yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking error.h usability... yes
+checking error.h presence... yes
+checking for error.h... yes
+checking ldap.h usability... yes
+checking ldap.h presence... yes
+checking for ldap.h... yes
+checking curl/curl.h usability... yes
+checking curl/curl.h presence... yes
+checking for curl/curl.h... yes
+checking security/pam_ext.h usability... yes
+checking security/pam_ext.h presence... yes
+checking for security/pam_ext.h... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking for vprintf... yes
+checking for _doprnt... no
+checking for memset... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strndup... yes
+checking for daemon... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating doc/Makefile
+config.status: creating doc/pam_pkcs11.8
+config.status: creating doc/doxygen.conf
+config.status: creating etc/Makefile
+config.status: creating etc/pam.d_login.example
+config.status: creating etc/pam_pkcs11.conf.example
+config.status: creating src/Makefile
+config.status: creating src/scconf/Makefile
+config.status: creating src/common/Makefile
+config.status: creating src/common/rsaref/Makefile
+config.status: creating src/tools/Makefile
+config.status: creating src/mappers/Makefile
+config.status: creating src/pam_pkcs11/Makefile
+config.status: creating tools/Makefile
+config.status: creating config.h
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+PAM-PKCS#11 has been configured with the following options
+
+Version:             0.6.11
+User binaries:       /usr/bin
+Configuration files: /etc
+libdir:              /lib
+
+Host:                x86_64-pc-linux-gnu
+Compiler:            /usr/bin/gcc
+Compiler flags:      -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security
+Preprocessor flags:  -Wdate-time -D_FORTIFY_SOURCE=2
+Linker flags:        -Wl,-z,relro -Wl,-z,now
+Libraries:           -lpam  -lcurl -lldap
+
+Debugging:           yes
+DocBook support:     yes
+PC/SC support:       yes
+CURL support:        yes
+LDAP support:        yes
+NSS support:         no
+OPENSSL support:     yes
+confdir:             /etc/pam_pkcs11
+
+make[1]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+   dh_auto_build
+	make -j1
+make[1]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+make  all-recursive
+make[2]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+Making all in .
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+Making all in po
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/po'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/po'
+Making all in doc
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/doc'
+ls: cannot access 'api/*': No such file or directory
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/doc'
+Making all in etc
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/etc'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/etc'
+Making all in src
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+Making all in scconf
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/scconf'
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o scconf.lo scconf.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c scconf.c  -fPIC -DPIC -o .libs/scconf.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c scconf.c -o scconf.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o parse.lo parse.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c parse.c  -fPIC -DPIC -o .libs/parse.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c parse.c -o parse.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o write.lo write.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c write.c  -fPIC -DPIC -o .libs/write.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c write.c -o write.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o sclex.lo sclex.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c sclex.c  -fPIC -DPIC -o .libs/sclex.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c sclex.c -o sclex.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-z,relro -Wl,-z,now -o libscconf.la  scconf.lo parse.lo write.lo sclex.lo  -lpam  -lcurl -lldap
+libtool: link: ar cru .libs/libscconf.a .libs/scconf.o .libs/parse.o .libs/write.o .libs/sclex.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libscconf.a
+libtool: link: ( cd ".libs" && rm -f "libscconf.la" && ln -s "../libscconf.la" "libscconf.la" )
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/scconf'
+Making all in common
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making all in .
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-algorithm.lo `test -f 'algorithm.c' || echo './'`algorithm.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c algorithm.c  -fPIC -DPIC -o .libs/libcommon_la-algorithm.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c algorithm.c -o libcommon_la-algorithm.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-cert_vfy.lo `test -f 'cert_vfy.c' || echo './'`cert_vfy.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c cert_vfy.c  -fPIC -DPIC -o .libs/libcommon_la-cert_vfy.o
+cert_vfy.c: In function ‘verify_crl’:
+cert_vfy.c:162:40: warning: passing argument 1 of ‘X509_OBJECT_get0_X509’ from incompatible pointer type [-Wincompatible-pointer-types]
+   issuer_cert = X509_OBJECT_get0_X509((&obj));
+                                       ~^~~~~
+In file included from /usr/include/openssl/x509.h:320,
+                 from cert_st.h:37,
+                 from cert_vfy.h:30,
+                 from cert_vfy.c:18:
+/usr/include/openssl/x509_vfy.h:263:7: note: expected ‘const X509_OBJECT *’ {aka ‘const struct x509_object_st *’} but argument is of type ‘X509_OBJECT **’ {aka ‘struct x509_object_st **’}
+ X509 *X509_OBJECT_get0_X509(const X509_OBJECT *a);
+       ^~~~~~~~~~~~~~~~~~~~~
+cert_vfy.c:183:3: warning: ‘X509_CRL_get_lastUpdate’ is deprecated [-Wdeprecated-declarations]
+   rv = X509_cmp_current_time(X509_CRL_get_lastUpdate(crl));
+   ^~
+In file included from ../common/pam-pkcs11-ossl-compat.h:30,
+                 from cert_st.h:36,
+                 from cert_vfy.h:30,
+                 from cert_vfy.c:18:
+/usr/include/openssl/x509.h:727:1: note: declared here
+ DEPRECATEDIN_1_1_0(ASN1_TIME *X509_CRL_get_lastUpdate(X509_CRL *crl))
+ ^~~~~~~~~~~~~~~~~~
+cert_vfy.c:192:3: warning: ‘X509_CRL_get_nextUpdate’ is deprecated [-Wdeprecated-declarations]
+   rv = X509_cmp_current_time(X509_CRL_get_nextUpdate(crl));
+   ^~
+In file included from ../common/pam-pkcs11-ossl-compat.h:30,
+                 from cert_st.h:36,
+                 from cert_vfy.h:30,
+                 from cert_vfy.c:18:
+/usr/include/openssl/x509.h:728:1: note: declared here
+ DEPRECATEDIN_1_1_0(ASN1_TIME *X509_CRL_get_nextUpdate(X509_CRL *crl))
+ ^~~~~~~~~~~~~~~~~~
+cert_vfy.c: In function ‘check_for_revocation’:
+cert_vfy.c:251:38: warning: passing argument 1 of ‘X509_OBJECT_get0_X509_CRL’ from incompatible pointer type [-Wincompatible-pointer-types]
+     crl = X509_OBJECT_get0_X509_CRL((&obj));
+                                     ~^~~~~
+In file included from /usr/include/openssl/x509.h:320,
+                 from cert_st.h:37,
+                 from cert_vfy.h:30,
+                 from cert_vfy.c:18:
+/usr/include/openssl/x509_vfy.h:265:11: note: expected ‘X509_OBJECT *’ {aka ‘struct x509_object_st *’} but argument is of type ‘X509_OBJECT **’ {aka ‘struct x509_object_st **’}
+ X509_CRL *X509_OBJECT_get0_X509_CRL(X509_OBJECT *a);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~
+cert_vfy.c:263:85: warning: passing argument 4 of ‘X509_STORE_CTX_get_by_subject’ from incompatible pointer type [-Wincompatible-pointer-types]
+       rv = X509_STORE_get_by_subject(ctx, X509_LU_X509, X509_get_issuer_name(x509), &obj);
+                                                                                     ^~~~
+In file included from /usr/include/openssl/x509.h:320,
+                 from cert_st.h:37,
+                 from cert_vfy.h:30,
+                 from cert_vfy.c:18:
+/usr/include/openssl/x509_vfy.h:451:65: note: expected ‘X509_OBJECT *’ {aka ‘struct x509_object_st *’} but argument is of type ‘X509_OBJECT **’ {aka ‘struct x509_object_st **’}
+                                   X509_NAME *name, X509_OBJECT *ret);
+                                                    ~~~~~~~~~~~~~^~~
+cert_vfy.c:268:40: warning: passing argument 1 of ‘X509_OBJECT_get0_X509’ from incompatible pointer type [-Wincompatible-pointer-types]
+       x509_ca = X509_OBJECT_get0_X509((&obj));
+                                       ~^~~~~
+In file included from /usr/include/openssl/x509.h:320,
+                 from cert_st.h:37,
+                 from cert_vfy.h:30,
+                 from cert_vfy.c:18:
+/usr/include/openssl/x509_vfy.h:263:7: note: expected ‘const X509_OBJECT *’ {aka ‘const struct x509_object_st *’} but argument is of type ‘X509_OBJECT **’ {aka ‘struct x509_object_st **’}
+ X509 *X509_OBJECT_get0_X509(const X509_OBJECT *a);
+       ^~~~~~~~~~~~~~~~~~~~~
+cert_vfy.c: In function ‘verify_signature’:
+cert_vfy.c:524:35: warning: passing argument 3 of ‘BN_bin2bn’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     BN_bin2bn(*signature, rs_len, ECDSA_SIG_get0_r(ec_sig));
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/openssl/asn1.h:23,
+                 from /usr/include/openssl/objects.h:15,
+                 from /usr/include/openssl/evp.h:28,
+                 from /usr/include/openssl/x509.h:18,
+                 from cert_st.h:37,
+                 from cert_vfy.h:30,
+                 from cert_vfy.c:18:
+/usr/include/openssl/bn.h:221:9: note: expected ‘BIGNUM *’ {aka ‘struct bignum_st *’} but argument is of type ‘const BIGNUM *’ {aka ‘const struct bignum_st *’}
+ BIGNUM *BN_bin2bn(const unsigned char *s, int len, BIGNUM *ret);
+         ^~~~~~~~~
+cert_vfy.c:525:44: warning: passing argument 3 of ‘BN_bin2bn’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     BN_bin2bn(*signature + rs_len, rs_len, ECDSA_SIG_get0_s(ec_sig));
+                                            ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/openssl/asn1.h:23,
+                 from /usr/include/openssl/objects.h:15,
+                 from /usr/include/openssl/evp.h:28,
+                 from /usr/include/openssl/x509.h:18,
+                 from cert_st.h:37,
+                 from cert_vfy.h:30,
+                 from cert_vfy.c:18:
+/usr/include/openssl/bn.h:221:9: note: expected ‘BIGNUM *’ {aka ‘struct bignum_st *’} but argument is of type ‘const BIGNUM *’ {aka ‘const struct bignum_st *’}
+ BIGNUM *BN_bin2bn(const unsigned char *s, int len, BIGNUM *ret);
+         ^~~~~~~~~
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c cert_vfy.c -o libcommon_la-cert_vfy.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-cert_info.lo `test -f 'cert_info.c' || echo './'`cert_info.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c cert_info.c  -fPIC -DPIC -o .libs/libcommon_la-cert_info.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c cert_info.c -o libcommon_la-cert_info.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-debug.lo `test -f 'debug.c' || echo './'`debug.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c debug.c  -fPIC -DPIC -o .libs/libcommon_la-debug.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c debug.c -o libcommon_la-debug.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-error.lo `test -f 'error.c' || echo './'`error.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c error.c  -fPIC -DPIC -o .libs/libcommon_la-error.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c error.c -o libcommon_la-error.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-uri.lo `test -f 'uri.c' || echo './'`uri.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c uri.c  -fPIC -DPIC -o .libs/libcommon_la-uri.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c uri.c -o libcommon_la-uri.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-strings.lo `test -f 'strings.c' || echo './'`strings.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c strings.c  -fPIC -DPIC -o .libs/libcommon_la-strings.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c strings.c -o libcommon_la-strings.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-pkcs11_lib.lo `test -f 'pkcs11_lib.c' || echo './'`pkcs11_lib.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c pkcs11_lib.c  -fPIC -DPIC -o .libs/libcommon_la-pkcs11_lib.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c pkcs11_lib.c -o libcommon_la-pkcs11_lib.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-strndup.lo `test -f 'strndup.c' || echo './'`strndup.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c strndup.c  -fPIC -DPIC -o .libs/libcommon_la-strndup.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c strndup.c -o libcommon_la-strndup.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o libcommon_la-base64.lo `test -f 'base64.c' || echo './'`base64.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c base64.c  -fPIC -DPIC -o .libs/libcommon_la-base64.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c base64.c -o libcommon_la-base64.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-z,relro -Wl,-z,now -o libcommon.la  libcommon_la-algorithm.lo libcommon_la-cert_vfy.lo libcommon_la-cert_info.lo libcommon_la-debug.lo libcommon_la-error.lo libcommon_la-uri.lo libcommon_la-strings.lo libcommon_la-pkcs11_lib.lo libcommon_la-strndup.lo libcommon_la-base64.lo -lssl -lcrypto  -ldl -lpam  -lcurl -lldap
+libtool: link: ar cru .libs/libcommon.a .libs/libcommon_la-algorithm.o .libs/libcommon_la-cert_vfy.o .libs/libcommon_la-cert_info.o .libs/libcommon_la-debug.o .libs/libcommon_la-error.o .libs/libcommon_la-uri.o .libs/libcommon_la-strings.o .libs/libcommon_la-pkcs11_lib.o .libs/libcommon_la-strndup.o .libs/libcommon_la-base64.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libcommon.a
+libtool: link: ( cd ".libs" && rm -f "libcommon.la" && ln -s "../libcommon.la" "libcommon.la" )
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making all in rsaref
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/rsaref'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/rsaref'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making all in mappers
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers'
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o ldap_mapper.lo ldap_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c ldap_mapper.c  -fPIC -DPIC -o .libs/ldap_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c ldap_mapper.c -o ldap_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o mapper.lo mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c mapper.c  -fPIC -DPIC -o .libs/mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c mapper.c -o mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o subject_mapper.lo subject_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c subject_mapper.c  -fPIC -DPIC -o .libs/subject_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c subject_mapper.c -o subject_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o mail_mapper.lo mail_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c mail_mapper.c  -fPIC -DPIC -o .libs/mail_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c mail_mapper.c -o mail_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o ms_mapper.lo ms_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c ms_mapper.c  -fPIC -DPIC -o .libs/ms_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c ms_mapper.c -o ms_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o krb_mapper.lo krb_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c krb_mapper.c  -fPIC -DPIC -o .libs/krb_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c krb_mapper.c -o krb_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o digest_mapper.lo digest_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c digest_mapper.c  -fPIC -DPIC -o .libs/digest_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c digest_mapper.c -o digest_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o cn_mapper.lo cn_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c cn_mapper.c  -fPIC -DPIC -o .libs/cn_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c cn_mapper.c -o cn_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o uid_mapper.lo uid_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c uid_mapper.c  -fPIC -DPIC -o .libs/uid_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c uid_mapper.c -o uid_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o pwent_mapper.lo pwent_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c pwent_mapper.c  -fPIC -DPIC -o .libs/pwent_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c pwent_mapper.c -o pwent_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o generic_mapper.lo generic_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c generic_mapper.c  -fPIC -DPIC -o .libs/generic_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c generic_mapper.c -o generic_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o null_mapper.lo null_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c null_mapper.c  -fPIC -DPIC -o .libs/null_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c null_mapper.c -o null_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o mapperlist.lo mapperlist.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c mapperlist.c  -fPIC -DPIC -o .libs/mapperlist.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c mapperlist.c -o mapperlist.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security ../scconf/libscconf.la ../common/libcommon.la -shared -Wl,-z,relro -Wl,-z,now -o libmappers.la  mapper.lo subject_mapper.lo mail_mapper.lo ms_mapper.lo krb_mapper.lo digest_mapper.lo cn_mapper.lo uid_mapper.lo pwent_mapper.lo generic_mapper.lo null_mapper.lo mapperlist.lo  -lpam  -lcurl -lldap
+libtool: link: (cd .libs/libmappers.lax/libscconf.a && ar x "/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers/../scconf/.libs/libscconf.a")
+libtool: link: (cd .libs/libmappers.lax/libcommon.a && ar x "/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers/../common/.libs/libcommon.a")
+libtool: link: ar cru .libs/libmappers.a .libs/mapper.o .libs/subject_mapper.o .libs/mail_mapper.o .libs/ms_mapper.o .libs/krb_mapper.o .libs/digest_mapper.o .libs/cn_mapper.o .libs/uid_mapper.o .libs/pwent_mapper.o .libs/generic_mapper.o .libs/null_mapper.o .libs/mapperlist.o   .libs/libmappers.lax/libscconf.a/parse.o .libs/libmappers.lax/libscconf.a/scconf.o .libs/libmappers.lax/libscconf.a/sclex.o .libs/libmappers.lax/libscconf.a/write.o  .libs/libmappers.lax/libcommon.a/libcommon_la-algorithm.o .libs/libmappers.lax/libcommon.a/libcommon_la-base64.o .libs/libmappers.lax/libcommon.a/libcommon_la-cert_info.o .libs/libmappers.lax/libcommon.a/libcommon_la-cert_vfy.o .libs/libmappers.lax/libcommon.a/libcommon_la-debug.o .libs/libmappers.lax/libcommon.a/libcommon_la-error.o .libs/libmappers.lax/libcommon.a/libcommon_la-pkcs11_lib.o .libs/libmappers.lax/libcommon.a/libcommon_la-strings.o .libs/libmappers.lax/libcommon.a/libcommon_la-strndup.o .libs/libmappers.lax/libcommon.a/libcommon_la-uri.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libmappers.a
+libtool: link: rm -fr .libs/libmappers.lax
+libtool: link: ( cd ".libs" && rm -f "libmappers.la" && ln -s "../libmappers.la" "libmappers.la" )
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -module -avoid-version -shared -Wl,-z,relro -Wl,-z,now -o ldap_mapper.la -rpath /lib/pam_pkcs11 ldap_mapper.lo libmappers.la -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -shared  -fPIC -DPIC  .libs/ldap_mapper.o  -Wl,--whole-archive ./.libs/libmappers.a -Wl,--no-whole-archive  -lssl -lcrypto -ldl -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap  -g -O2 -fstack-protector-strong -Wl,-z -Wl,relro -Wl,-z -Wl,now   -pthread -Wl,-soname -Wl,ldap_mapper.so -o .libs/ldap_mapper.so
+libtool: link: ( cd ".libs" && rm -f "ldap_mapper.la" && ln -s "../ldap_mapper.la" "ldap_mapper.la" )
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o opensc_mapper.lo opensc_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c opensc_mapper.c  -fPIC -DPIC -o .libs/opensc_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c opensc_mapper.c -o opensc_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -module -avoid-version -shared -Wl,-z,relro -Wl,-z,now -o opensc_mapper.la -rpath /lib/pam_pkcs11 opensc_mapper.lo libmappers.la -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -shared  -fPIC -DPIC  .libs/opensc_mapper.o  -Wl,--whole-archive ./.libs/libmappers.a -Wl,--no-whole-archive  -lssl -lcrypto -ldl -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap  -g -O2 -fstack-protector-strong -Wl,-z -Wl,relro -Wl,-z -Wl,now   -pthread -Wl,-soname -Wl,opensc_mapper.so -o .libs/opensc_mapper.so
+libtool: link: ( cd ".libs" && rm -f "opensc_mapper.la" && ln -s "../opensc_mapper.la" "opensc_mapper.la" )
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o openssh_mapper.lo openssh_mapper.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c openssh_mapper.c  -fPIC -DPIC -o .libs/openssh_mapper.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wdate-time -D_FORTIFY_SOURCE=2 -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c openssh_mapper.c -o openssh_mapper.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc  -DSUBJECT_MAPPER_STATIC -DMAIL_MAPPER_STATIC -DMS_MAPPER_STATIC -DKRB_MAPPER_STATIC -DDIGEST_MAPPER_STATIC -DCN_MAPPER_STATIC -DUID_MAPPER_STATIC -DPWENT_MAPPER_STATIC -DGENERIC_MAPPER_STATIC -DNULL_MAPPER_STATIC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -module -avoid-version -shared -Wl,-z,relro -Wl,-z,now -o openssh_mapper.la -rpath /lib/pam_pkcs11 openssh_mapper.lo libmappers.la -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -shared  -fPIC -DPIC  .libs/openssh_mapper.o  -Wl,--whole-archive ./.libs/libmappers.a -Wl,--no-whole-archive  -lssl -lcrypto -ldl -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap  -g -O2 -fstack-protector-strong -Wl,-z -Wl,relro -Wl,-z -Wl,now   -pthread -Wl,-soname -Wl,openssh_mapper.so -o .libs/openssh_mapper.so
+libtool: link: ( cd ".libs" && rm -f "openssh_mapper.la" && ln -s "../openssh_mapper.la" "openssh_mapper.la" )
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers'
+Making all in pam_pkcs11
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11'
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..  -Wall -fno-strict-aliasing  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o mapper_mgr.lo mapper_mgr.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wall -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c mapper_mgr.c  -fPIC -DPIC -o .libs/mapper_mgr.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wall -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c mapper_mgr.c -o mapper_mgr.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..  -Wall -fno-strict-aliasing  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o pam_config.lo pam_config.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wall -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c pam_config.c  -fPIC -DPIC -o .libs/pam_config.o
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wall -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c pam_config.c -o pam_config.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -Wall -fno-strict-aliasing  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-z,relro -Wl,-z,now -o libfinder.la  mapper_mgr.lo pam_config.lo  -lpam  -lcurl -lldap
+libtool: link: ar cru .libs/libfinder.a .libs/mapper_mgr.o .libs/pam_config.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libfinder.a
+libtool: link: ( cd ".libs" && rm -f "libfinder.la" && ln -s "../libfinder.la" "libfinder.la" )
+/bin/bash ../../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..  -Wall -fno-strict-aliasing  -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o pam_pkcs11.lo pam_pkcs11.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wall -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c pam_pkcs11.c  -fPIC -DPIC -o .libs/pam_pkcs11.o
+pam_pkcs11.c: In function ‘pam_get_pwd’:
+pam_pkcs11.c:169:36: warning: passing argument 3 of ‘pam_get_item’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rv = pam_get_item(pamh, oitem, &old_pwd);
+                                    ^~~~~~~~
+In file included from /usr/include/security/pam_appl.h:18,
+                 from pam_pkcs11.c:27:
+/usr/include/security/_pam_types.h:175:68: note: expected ‘const void **’ but argument is of type ‘const char **’
+ pam_get_item(const pam_handle_t *pamh, int item_type, const void **item);
+                                                       ~~~~~~~~~~~~~^~~~
+pam_pkcs11.c:182:39: warning: passing argument 3 of ‘pam_get_item’ from incompatible pointer type [-Wincompatible-pointer-types]
+     rv = pam_get_item(pamh, PAM_CONV, &conv);
+                                       ^~~~~
+In file included from /usr/include/security/pam_appl.h:18,
+                 from pam_pkcs11.c:27:
+/usr/include/security/_pam_types.h:175:68: note: expected ‘const void **’ but argument is of type ‘struct pam_conv **’
+ pam_get_item(const pam_handle_t *pamh, int item_type, const void **item);
+                                                       ~~~~~~~~~~~~~^~~~
+pam_pkcs11.c: In function ‘pam_sm_authenticate’:
+pam_pkcs11.c:304:35: warning: passing argument 3 of ‘pam_get_item’ from incompatible pointer type [-Wincompatible-pointer-types]
+   pam_get_item(pamh, PAM_SERVICE, &service);
+                                   ^~~~~~~~
+In file included from /usr/include/security/pam_appl.h:18,
+                 from pam_pkcs11.c:27:
+/usr/include/security/_pam_types.h:175:68: note: expected ‘const void **’ but argument is of type ‘char **’
+ pam_get_item(const pam_handle_t *pamh, int item_type, const void **item);
+                                                       ~~~~~~~~~~~~~^~~~
+pam_pkcs11.c:316:31: warning: passing argument 3 of ‘pam_get_item’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pam_get_item(pamh, PAM_USER, &user);
+                               ^~~~~
+In file included from /usr/include/security/pam_appl.h:18,
+                 from pam_pkcs11.c:27:
+/usr/include/security/_pam_types.h:175:68: note: expected ‘const void **’ but argument is of type ‘const char **’
+ pam_get_item(const pam_handle_t *pamh, int item_type, const void **item);
+                                                       ~~~~~~~~~~~~~^~~~
+pam_pkcs11.c:321:36: warning: passing argument 3 of ‘pam_get_item’ from incompatible pointer type [-Wincompatible-pointer-types]
+  rv = pam_get_item(pamh, PAM_USER, &user);
+                                    ^~~~~
+In file included from /usr/include/security/pam_appl.h:18,
+                 from pam_pkcs11.c:27:
+/usr/include/security/_pam_types.h:175:68: note: expected ‘const void **’ but argument is of type ‘const char **’
+ pam_get_item(const pam_handle_t *pamh, int item_type, const void **item);
+                                                       ~~~~~~~~~~~~~^~~~
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../.. -Wall -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -fno-strict-aliasing -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c pam_pkcs11.c -o pam_pkcs11.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -Wall -fno-strict-aliasing  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -module -avoid-version -shared -export-symbols-regex '^pam_' -Wl,-z,relro -Wl,-z,now -o pam_pkcs11.la -rpath /lib/security pam_pkcs11.lo mapper_mgr.lo pam_config.lo ../mappers/libmappers.la  -lssl -lcrypto -lpam  -lcurl -lldap
+libtool: link: /usr/bin/nm -B  .libs/pam_pkcs11.o .libs/mapper_mgr.o .libs/pam_config.o   ../mappers/.libs/libmappers.a | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' | /usr/bin/sed 's/.* //' | sort | uniq > .libs/pam_pkcs11.exp
+libtool: link: /usr/bin/grep -E -e "^pam_" ".libs/pam_pkcs11.exp" > ".libs/pam_pkcs11.expT"
+libtool: link: mv -f ".libs/pam_pkcs11.expT" ".libs/pam_pkcs11.exp"
+libtool: link: echo "{ global:" > .libs/pam_pkcs11.ver
+libtool: link:  cat .libs/pam_pkcs11.exp | sed -e "s/\(.*\)/\1;/" >> .libs/pam_pkcs11.ver
+libtool: link:  echo "local: *; };" >> .libs/pam_pkcs11.ver
+libtool: link:  /usr/bin/gcc -shared  -fPIC -DPIC  .libs/pam_pkcs11.o .libs/mapper_mgr.o .libs/pam_config.o  -Wl,--whole-archive ../mappers/.libs/libmappers.a -Wl,--no-whole-archive  -ldl -lssl -lcrypto -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap  -g -O2 -fstack-protector-strong -Wl,-z -Wl,relro -Wl,-z -Wl,now   -pthread -Wl,-soname -Wl,pam_pkcs11.so -Wl,-version-script -Wl,.libs/pam_pkcs11.ver -o .libs/pam_pkcs11.so
+libtool: link: ( cd ".libs" && rm -f "pam_pkcs11.la" && ln -s "../pam_pkcs11.la" "pam_pkcs11.la" )
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11'
+Making all in tools
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools'
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o card_eventmgr.o card_eventmgr.c
+card_eventmgr.c: In function ‘read_pidfile’:
+card_eventmgr.c:271:5: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+     fscanf(fd, "%ld", &temp);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+card_eventmgr.c: In function ‘create_pidfile’:
+card_eventmgr.c:300:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(fd, tmp, strlen(tmp));
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o daemon.o daemon.c
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -lpcsclite -Wl,-z,relro -Wl,-z,now -o card_eventmgr card_eventmgr.o daemon.o ../scconf/libscconf.la ../common/libcommon.la -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -pthread -I/usr/include/PCSC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-z -Wl,relro -Wl,-z -Wl,now -o card_eventmgr card_eventmgr.o daemon.o  -lpcsclite ../scconf/.libs/libscconf.a ../common/.libs/libcommon.a -lssl -lcrypto -ldl -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap -pthread
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o pkcs11_eventmgr.o pkcs11_eventmgr.c
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -lpcsclite -Wl,-z,relro -Wl,-z,now -o pkcs11_eventmgr pkcs11_eventmgr.o daemon.o ../scconf/libscconf.la ../common/libcommon.la -lssl -lcrypto -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -pthread -I/usr/include/PCSC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-z -Wl,relro -Wl,-z -Wl,now -o pkcs11_eventmgr pkcs11_eventmgr.o daemon.o  -lpcsclite ../scconf/.libs/libscconf.a ../common/.libs/libcommon.a -ldl -lssl -lcrypto -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap -pthread
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o pklogin_finder.o pklogin_finder.c
+pklogin_finder.c: In function ‘main’:
+pklogin_finder.c:129:18: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     X509 *x509 = get_X509_certificate(certs[i]);
+                  ^~~~~~~~~~~~~~~~~~~~
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -lpcsclite -Wl,-z,relro -Wl,-z,now -o pklogin_finder pklogin_finder.o ../pam_pkcs11/libfinder.la ../mappers/libmappers.la -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -pthread -I/usr/include/PCSC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-z -Wl,relro -Wl,-z -Wl,now -o pklogin_finder pklogin_finder.o  -lpcsclite ../pam_pkcs11/.libs/libfinder.a ../mappers/.libs/libmappers.a -lssl -lcrypto -ldl -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap -pthread
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o pkcs11_inspect.o pkcs11_inspect.c
+pkcs11_inspect.c: In function ‘main’:
+pkcs11_inspect.c:128:18: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     X509 *x509 = get_X509_certificate(certs[i]);
+                  ^~~~~~~~~~~~~~~~~~~~
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -lpcsclite -Wl,-z,relro -Wl,-z,now -o pkcs11_inspect pkcs11_inspect.o ../pam_pkcs11/libfinder.la ../mappers/libmappers.la -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -pthread -I/usr/include/PCSC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-z -Wl,relro -Wl,-z -Wl,now -o pkcs11_inspect pkcs11_inspect.o  -lpcsclite ../pam_pkcs11/.libs/libfinder.a ../mappers/.libs/libmappers.a -lssl -lcrypto -ldl -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap -pthread
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o pkcs11_listcerts.o pkcs11_listcerts.c
+pkcs11_listcerts.c: In function ‘main’:
+pkcs11_listcerts.c:125:16: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     X509 *cert=get_X509_certificate(certs[i]);
+                ^~~~~~~~~~~~~~~~~~~~
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -lpcsclite -Wl,-z,relro -Wl,-z,now -o pkcs11_listcerts pkcs11_listcerts.o ../pam_pkcs11/libfinder.la ../scconf/libscconf.la ../common/libcommon.la -lssl -lcrypto -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -pthread -I/usr/include/PCSC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-z -Wl,relro -Wl,-z -Wl,now -o pkcs11_listcerts pkcs11_listcerts.o  -lpcsclite ../pam_pkcs11/.libs/libfinder.a ../scconf/.libs/libscconf.a ../common/.libs/libcommon.a -ldl -lssl -lcrypto -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap -pthread
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../..   -Wdate-time -D_FORTIFY_SOURCE=2 -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -c -o pkcs11_setup.o pkcs11_setup.c
+/bin/bash ../../libtool  --tag=CC   --mode=link /usr/bin/gcc -pthread -I/usr/include/PCSC  -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -lpcsclite -Wl,-z,relro -Wl,-z,now -o pkcs11_setup pkcs11_setup.o ../scconf/libscconf.la ../common/libcommon.la -lpam  -lcurl -lldap
+libtool: link: /usr/bin/gcc -pthread -I/usr/include/PCSC -g -O2 -fdebug-prefix-map=/home/build/pam_pkcs11_custom/pam_pkcs11=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-z -Wl,relro -Wl,-z -Wl,now -o pkcs11_setup pkcs11_setup.o  -lpcsclite ../scconf/.libs/libscconf.a ../common/.libs/libcommon.a -lssl -lcrypto -ldl -lpam /usr/lib/x86_64-linux-gnu/libcurl.so -lldap -pthread
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools'
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+Making all in tools
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/tools'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/tools'
+make[2]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+make[1]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+   dh_auto_test
+	make -j1 check VERBOSE=1
+make[1]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+Making check in .
+make[2]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+make[2]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+Making check in po
+make[2]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/po'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/po'
+Making check in doc
+make[2]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/doc'
+ls: cannot access 'api/*': No such file or directory
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/doc'
+Making check in etc
+make[2]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/etc'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/etc'
+Making check in src
+make[2]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+Making check in scconf
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/scconf'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/scconf'
+Making check in common
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making check in .
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+make[4]: Nothing to be done for 'check-am'.
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making check in rsaref
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/rsaref'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/rsaref'
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making check in mappers
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers'
+Making check in pam_pkcs11
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11'
+Making check in tools
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools'
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+make[2]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+Making check in tools
+make[2]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/tools'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/tools'
+make[1]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+   dh_testroot
+   dh_prep
+   dh_installdirs
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+dh_auto_install
+	make -j1 install DESTDIR=/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp AM_UPDATE_INFO_DIR=no
+make[2]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+Making install in .
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+Making install in po
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/po'
+installing de.gmo as /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/locale/de/LC_MESSAGES/pam_pkcs11.mo
+installing fr.gmo as /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/locale/fr/LC_MESSAGES/pam_pkcs11.mo
+installing it.gmo as /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/locale/it/LC_MESSAGES/pam_pkcs11.mo
+installing nl.gmo as /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/locale/nl/LC_MESSAGES/pam_pkcs11.mo
+installing pl.gmo as /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/locale/pl/LC_MESSAGES/pam_pkcs11.mo
+installing pt_BR.gmo as /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/locale/pt_BR/LC_MESSAGES/pam_pkcs11.mo
+installing ru.gmo as /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/locale/ru/LC_MESSAGES/pam_pkcs11.mo
+installing tr.gmo as /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/locale/tr/LC_MESSAGES/pam_pkcs11.mo
+if test "pam_pkcs11" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin    Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/po'
+Making install in doc
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/doc'
+ls: cannot access 'api/*': No such file or directory
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/doc'
+ls: cannot access 'api/*': No such file or directory
+make[4]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/man/man1'
+ /usr/bin/install -c -m 644 card_eventmgr.1 pklogin_finder.1 pkcs11_eventmgr.1 pkcs11_inspect.1 pkcs11_setup.1 pkcs11_listcerts.1 pkcs11_make_hash_link.1 '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/man/man1'
+ /usr/bin/mkdir -p '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/man/man8'
+ /usr/bin/install -c -m 644 pam_pkcs11.8 '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/man/man8'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/doc'
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/doc'
+Making install in etc
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/etc'
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/etc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/doc/pam_pkcs11'
+ /usr/bin/install -c -m 644 subject_mapping.example mail_mapping.example digest_mapping.example pkcs11_eventmgr.conf.example card_eventmgr.conf.example pam_pkcs11.conf.example pam.d_login.example '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/share/doc/pam_pkcs11'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/etc'
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/etc'
+Making install in src
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+Making install in scconf
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/scconf'
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/scconf'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/scconf'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/scconf'
+Making install in common
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making install in .
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+make[6]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Nothing to be done for 'install-data-am'.
+make[6]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making install in rsaref
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/rsaref'
+make[6]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/rsaref'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Nothing to be done for 'install-data-am'.
+make[6]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/rsaref'
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common/rsaref'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/common'
+Making install in mappers
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers'
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers'
+ /usr/bin/mkdir -p '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/pam_pkcs11'
+ /bin/bash ../../libtool   --mode=install /usr/bin/install -c   ldap_mapper.la opensc_mapper.la openssh_mapper.la '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/pam_pkcs11'
+libtool: install: /usr/bin/install -c .libs/ldap_mapper.so /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/pam_pkcs11/ldap_mapper.so
+libtool: install: /usr/bin/install -c .libs/ldap_mapper.lai /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/pam_pkcs11/ldap_mapper.la
+libtool: install: /usr/bin/install -c .libs/opensc_mapper.so /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/pam_pkcs11/opensc_mapper.so
+libtool: install: /usr/bin/install -c .libs/opensc_mapper.lai /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/pam_pkcs11/opensc_mapper.la
+libtool: install: /usr/bin/install -c .libs/openssh_mapper.so /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/pam_pkcs11/openssh_mapper.so
+libtool: install: /usr/bin/install -c .libs/openssh_mapper.lai /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/pam_pkcs11/openssh_mapper.la
+libtool: warning: remember to run 'libtool --finish /lib/pam_pkcs11'
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/mappers'
+Making install in pam_pkcs11
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11'
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/security'
+ /bin/bash ../../libtool   --mode=install /usr/bin/install -c   pam_pkcs11.la '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/security'
+libtool: install: /usr/bin/install -c .libs/pam_pkcs11.so /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/security/pam_pkcs11.so
+libtool: install: /usr/bin/install -c .libs/pam_pkcs11.lai /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/lib/security/pam_pkcs11.la
+libtool: warning: remember to run 'libtool --finish /lib/security'
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/pam_pkcs11'
+Making install in tools
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools'
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools'
+ /usr/bin/mkdir -p '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin'
+  /bin/bash ../../libtool   --mode=install /usr/bin/install -c card_eventmgr pkcs11_eventmgr pklogin_finder pkcs11_inspect pkcs11_listcerts pkcs11_setup '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin'
+libtool: install: /usr/bin/install -c card_eventmgr /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin/card_eventmgr
+libtool: install: /usr/bin/install -c pkcs11_eventmgr /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin/pkcs11_eventmgr
+libtool: install: /usr/bin/install -c pklogin_finder /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin/pklogin_finder
+libtool: install: /usr/bin/install -c pkcs11_inspect /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin/pkcs11_inspect
+libtool: install: /usr/bin/install -c pkcs11_listcerts /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin/pkcs11_listcerts
+libtool: install: /usr/bin/install -c pkcs11_setup /home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin/pkcs11_setup
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src/tools'
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+make[5]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/src'
+Making install in tools
+make[3]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/tools'
+make[4]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11/tools'
+ /usr/bin/mkdir -p '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin'
+ /usr/bin/install -c pkcs11_make_hash_link '/home/build/pam_pkcs11_custom/pam_pkcs11/debian/tmp/usr/bin'
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/tools'
+make[3]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11/tools'
+make[2]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+# remove .la files
+rm debian/tmp/lib/security/*.la
+rm debian/tmp/lib/pam_pkcs11/*.la
+make[1]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installexamples
+   dh_installman
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+	Normalized debian/libpam-pkcs11/usr/share/locale/pt_BR/LC_MESSAGES/pam_pkcs11.mo
+	Normalized debian/libpam-pkcs11/usr/share/locale/tr/LC_MESSAGES/pam_pkcs11.mo
+	Normalized debian/libpam-pkcs11/usr/share/locale/de/LC_MESSAGES/pam_pkcs11.mo
+	Normalized debian/libpam-pkcs11/usr/share/locale/ru/LC_MESSAGES/pam_pkcs11.mo
+	Normalized debian/libpam-pkcs11/usr/share/locale/pl/LC_MESSAGES/pam_pkcs11.mo
+	Normalized debian/libpam-pkcs11/usr/share/locale/nl/LC_MESSAGES/pam_pkcs11.mo
+	Normalized debian/libpam-pkcs11/usr/share/locale/fr/LC_MESSAGES/pam_pkcs11.mo
+	Normalized debian/libpam-pkcs11/usr/share/locale/it/LC_MESSAGES/pam_pkcs11.mo
+   dh_compress
+   dh_fixperms
+   dh_missing
+   debian/rules override_dh_strip
+make[1]: Entering directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+dh_strip --dbg-package=pam-pkcs11-dbg
+make[1]: Leaving directory '/home/build/pam_pkcs11_custom/pam_pkcs11'
+   dh_makeshlibs
+   dh_shlibdeps
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libpam-pkcs11/usr/bin/pkcs11_listcerts debian/libpam-pkcs11/lib/pam_pkcs11/openssh_mapper.so debian/libpam-pkcs11/usr/bin/pkcs11_inspect debian/libpam-pkcs11/lib/pam_pkcs11/opensc_mapper.so debian/libpam-pkcs11/usr/bin/pklogin_finder debian/libpam-pkcs11/lib/security/pam_pkcs11.so debian/libpam-pkcs11/usr/bin/pkcs11_eventmgr debian/libpam-pkcs11/usr/bin/pkcs11_setup debian/libpam-pkcs11/lib/pam_pkcs11/ldap_mapper.so debian/libpam-pkcs11/usr/bin/card_eventmgr were not linked against libssl.so.1.1 (they use none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: Depends field of package pam-pkcs11-dbg: substitution variable ${shlibs:Depends} used, but is not defined
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'libpam-pkcs11' in '../libpam-pkcs11_0.6.11-1_amd64.deb'.
+dpkg-deb: building package 'pam-pkcs11-dbg' in '../pam-pkcs11-dbg_0.6.11-1_amd64.deb'.

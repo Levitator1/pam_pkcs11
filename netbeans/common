@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export DEB_BUILD_OPTIONS=nostrip noopt debug
+
