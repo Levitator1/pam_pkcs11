@@ -1,6 +1,19 @@
 PAM-PKCS\#11 Login Tools
 ========================
 
+Notes from Levitator1
+----------------------
+ Currently attempting to sign via openssl using the pkcs11-engine library
+
+- Openssl keeps balking and complaining about PEM format still, similar to what it does when attempting to validate the signature.
+- Looks like maybe OpenSSL is being initialized wrong, or there is some incompatibility with the Debian Buster environment
+- Have given up messing with this for now and will just use the p11/pam package from Debian instead. It lacks CA verification, but it's not important
+	and it works out of the box
+
+The other branch I added (encryption_test, or something) attempts to get around this problem by using round-trip encryption instead of signing.
+I didn't finish that, and suspect it will probably end up suffering from the same problems.
+
+
 Description
 -----------
 
