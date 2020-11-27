@@ -710,6 +710,7 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
     }
 
     /* sign random value */
+    close_pkcs11_session(ph);
     signature = NULL;
     rv = sign_value(ph, chosen_cert, random_value, sizeof(random_value),
 		    &signature, &signature_length);

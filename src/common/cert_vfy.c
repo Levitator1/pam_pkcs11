@@ -530,7 +530,8 @@ int verify_signature(X509 * x509, unsigned char *data, int data_length,
   DBG1("public key type: 0x%08x", EVP_PKEY_base_id(pubkey));
   DBG1("public key bits: 0x%08x", EVP_PKEY_bits(pubkey));
 
-  if (EVP_PKEY_base_id(pubkey) == EVP_PKEY_EC) {
+  //if (EVP_PKEY_base_id(pubkey) == EVP_PKEY_EC) {
+  if(0){
     rs_len = *signature_length / 2;
     ec_sig = ECDSA_SIG_new();
     //reverse(*signature, rs_len);
@@ -577,8 +578,8 @@ int verify_signature(X509 * x509, unsigned char *data, int data_length,
     }
     
     EC_KEY_free(ec_key);
+         return rv;
     */
-    return rv;
     
     /*
     *signature_length = i2d_ECDSA_SIG(ec_sig, &p);
@@ -598,7 +599,7 @@ int verify_signature(X509 * x509, unsigned char *data, int data_length,
     DBG("ECDSA signature is valid");
     return 0;
     */
-  }
+  //}
   
   /*
   if (EVP_PKEY_base_id(pubkey) == EVP_PKEY_EC) {
@@ -616,7 +617,8 @@ int verify_signature(X509 * x509, unsigned char *data, int data_length,
     return 0;
   }
   */
-
+  }
+  
   md_ctx = EVP_MD_CTX_new();
   /* verify the signature */
 #ifdef USE_HASH_SHA1

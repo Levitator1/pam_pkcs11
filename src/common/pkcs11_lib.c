@@ -948,6 +948,7 @@ SECU_Strerror(PRErrorCode errNum)
 #include "cert_st.h"
 #include <openssl/x509.h>
 #include <openssl/err.h>
+#include <openssl/engine.h>
 
 #include "rsaref/pkcs11.h"
 
@@ -1756,6 +1757,88 @@ const X509 *get_X509_certificate(cert_object_t *cert)
   return cert->x509;
 }
 
+//There were compatibility problems signing via PKCS11/Cryptoki and then
+//verifying with openssl. Since openssl supports PKCS11, then it makes sense
+//to do both via openssl, and thus avoid inter-library compatibility problems.
+int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
+	CK_ULONG length, CK_BYTE **signature, CK_ULONG *signature_length){
+    
+    int need_engine_finish=0;
+    int result;
+    int exitval;
+    EVP_MD_CTX *mdctx = EVP_MD_CTX_new();
+    EVP_MD_CTX_init(mdctx);  //This is probably redundant, but the manual calls for it
+    ENGINE *pkcs11=NULL;
+    
+    //Get a hold of the PKCS11 engine for openssl
+    pkcs11 = ENGINE_by_id("pkcs11");
+    if(pkcs11 == NULL){
+        set_error("Could not load openssl engine: pkcs11");
+        exitval = -1;
+        goto cleanup;
+    }
+    
+    //TODO: Add error detail
+    if(!ENGINE_init(pkcs11)){
+        set_error("Failed to initialize pkcs11 engine for openssl");
+        exitval = -1;
+        goto cleanup;
+    }
+    need_engine_finish = 1;
+    
+    char *key_uri = malloc(128);
+    //Looks like the cert id is a 1 byte-integer?
+    snprintf(key_uri, 128, "pkcs11:slot-id=%i;id=%i", h->current_slot, 1, (int)cert->id[0]);
+    EVP_PKEY *pkey = ENGINE_load_private_key(pkcs11, key_uri, 0, 0);
+        
+    //EVP_MD *ecdsa = ENGINE_get_digest(pkcs11, NID_ecdsa_with_Recommended);
+    result = EVP_SignInit_ex(mdctx, EVP_sha256(), pkcs11);
+    if(result != 1){
+        set_error("EVP_SignInit_ex() failed for pkcs11/sha256: %s (0x%x)", ERR_error_string(ERR_get_error(), NULL), result);
+        exitval = -1;
+        goto cleanup;
+    }
+    
+    result = EVP_SignUpdate(mdctx, *data, length);
+    if( result != 1 ){
+        DBG("EVP_SignUpdate() failed");
+        set_error("OpenSSL error generating signature");
+        exitval = -1;
+        goto cleanup;
+    }
+            
+    if(pkey == NULL){
+        set_error("Failed retrieving private key handle from pkcs11-engine");
+        exitval=-1;
+        goto cleanup;
+    }
+    
+    int pkeysize = EVP_PKEY_size(pkey);
+    if(signature_length < pkeysize){
+        free(*signature);
+        *signature = pkeysize;
+    }
+    
+    result = EVP_SignFinal(mdctx, *signature, signature_length, pkey);
+    if(result != 1){
+        set_error("Failed signing with certificate key");
+        DBG1("EVP_SignFinal() failed: 0x%x", result);
+        exitval=-1;
+    }
+    exitval=0;
+    
+cleanup:
+    if(pkey != NULL) EVP_PKEY_free(pkey);
+    if(need_engine_finish) ENGINE_finish(pkcs11);
+    if( pkcs11 != NULL ) ENGINE_free(pkcs11);
+    if(mdctx != NULL) EVP_MD_CTX_free(mdctx);
+
+    //set_error("ACCESS DENIED JUST BECAUSE");
+    return exitval;    
+}
+
+
+/*
 int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
 	CK_ULONG length, CK_BYTE **signature, CK_ULONG *signature_length)
 {
@@ -1776,7 +1859,7 @@ int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
     return -1;
   }
 
-  /* set mechanism */
+  // set mechanism //
   switch (cert->key_type) {
     case CKK_RSA:
       mechanism.mechanism = CKM_RSA_PKCS;
@@ -1793,7 +1876,7 @@ int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
       set_error("unsupported private key type 0x%08X", cert->key_type);
       return -1;
   }
-  /* compute hash-value */
+  // compute hash-value //
 #ifdef USE_HASH_SHA1
   DBG("hashing with SHA1");
   SHA1(data, length, &hash[15]);
@@ -1804,10 +1887,8 @@ int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
   DBG5("hash[%ld] = [...:%02x:%02x:%02x:...:%02x]", sizeof(hash),
       hash[19], hash[20], hash[21], hash[sizeof(hash) - 1]);
 #endif
-  /* sign the token */
   
-  
-  
+  // sign the token // 
   rv = h->fl->C_SignInit(h->session, &mechanism, cert->private_key);
   if (rv != CKR_OK) {
     set_error("C_SignInit() failed: 0x%08lX", rv);
@@ -1823,7 +1904,7 @@ int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
     }
     rv = h->fl->C_Sign(h->session, hash + h_offset, sizeof(hash) - h_offset, *signature, signature_length);
     if (rv == CKR_BUFFER_TOO_SMALL) {
-      /* increase signature length as long as it it to short */
+      // increase signature length as long as it it to short
       free(*signature);
       *signature = NULL;
       DBG1("increased signature buffer-length to %ld", *signature_length);
@@ -1838,4 +1919,6 @@ int sign_value(pkcs11_handle_t *h, cert_object_t *cert, CK_BYTE *data,
       (*signature)[0], (*signature)[1], (*signature)[2], (*signature)[*signature_length - 1]);
   return 0;
 }
+*/
+
 #endif /* HAVE_NSS */
