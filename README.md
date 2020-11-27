@@ -3,12 +3,22 @@ PAM-PKCS\#11 Login Tools
 
 Notes from Levitator1
 ----------------------
- Currently attempting to sign via openssl using the pkcs11-engine library
+
+THIS IS BROKEN. GO AWAY.
+
+Ok, so the funadmental problem to address here is an issue of certificate private key validation.
+The upstream code attempts to accomplish this by signing random data using the Cryptoki/PKCS11 library.
+And then it tries to validate that signature using OpenSSL, but on Debian, using ECDSA/P-384 certificates,
+OpenSSL wigs out and issues some nonsensical complaint about a missing PEM header. I assumed that this was
+some sort of incompatibility between Cryptoki and OpenSSL, so I set about implementing the signature generation
+using OpenSSL, so that the formats would match, but OpenSSL now complains about the same thing attempting to
+sign. Furthermore, it seems like it's going to be a pain figuring out how to get OpenSSL to reference the 
+hardware PKCS11 private key, which should be possible...
 
 - Openssl keeps balking and complaining about PEM format still, similar to what it does when attempting to validate the signature.
 - Looks like maybe OpenSSL is being initialized wrong, or there is some incompatibility with the Debian Buster environment
-- Have given up messing with this for now and will just use the p11/pam package from Debian instead. It lacks CA verification, but it's not important
-	and it works out of the box
+- Have given up messing with this for now and will just use the pam-p11 package from Debian instead. It lacks CA verification, but it's not important
+	and it works out-of-the-box
 
 The other branch I added (encryption_test, or something) attempts to get around this problem by using round-trip encryption instead of signing.
 I didn't finish that, and suspect it will probably end up suffering from the same problems.
